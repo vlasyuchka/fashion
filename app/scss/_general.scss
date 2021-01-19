@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  @media (min-width: $xxl) {
+    font-size: 0.52vw;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-main;
+  color: $color-dark;
+}

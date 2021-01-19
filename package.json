@@ -1,0 +1,26 @@
+{
+  "name": "fashion",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index,html",
+  "scripts": {
+    "test": "default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "app"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "test",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^4.14.1"
+  }
+}

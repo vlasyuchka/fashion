@@ -1,0 +1,163 @@
+// $gutter: 15px;
+// $cols: 12;
+
+// $sm: 576px;
+// $md: 768px;
+// $lg: 992px;
+// $xl: 1200px;
+// $xxl: 1921px;
+
+// %col {
+//   padding: 0 $gutter;
+// }
+
+// @mixin col-sm($num) {
+//   @extend %col;
+//   @media (min-width: #{$sm}) {
+//     width: calc((100% / #{$cols}) * #{$num});
+//   }
+// }
+
+// @mixin col-md($num) {
+//   @extend %col;
+//   @media (min-width: #{$md}) {
+//     width: calc((100% / #{$cols}) * #{$num});
+//   }
+// }
+
+// @mixin col-lg($num) {
+//   @extend %col;
+//   @media (min-width: #{$lg}) {
+//     width: calc((100% / #{$cols}) * #{$num});
+//   }
+// }
+
+// @mixin col-xl($num) {
+//   @extend %col;
+//   @media (min-width: #{$xl}) {
+//     width: calc((100% / #{$cols}) * #{$num});
+//   }
+// }
+
+// @mixin col-xxl($num) {
+//   @extend %col;
+//   @media (min-width: #{$xxl}) {
+//     width: calc((100% / #{$cols}) * #{$num});
+//   }
+// }
+
+// .container {
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 0 #{$gutter};
+//   @media (min-width: #{$sm}) {
+//     width: 540px;
+//   }
+//   @media (min-width: #{$md}) {
+//     width: 720px;
+//   }
+//   @media (min-width: #{$lg}) {
+//     width: 960px;
+//   }
+//   @media (min-width: #{$xl}) {
+//     width: 1140px;
+//   }
+//   //   @media (min-width: #{$xxl}) {
+//   //     width: 1500px;
+//   //   }
+// }
+
+// .row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin: 0 -#{$gutter};
+//   &--center {
+//     justify-content: center;
+//   }
+// }
+
+$gutter: 15px;
+$cols: 12;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1250px;
+$xxl: 1921px;
+
+.container {
+  margin: 0 auto;
+  padding: 0 $gutter;
+
+  @media (min-width: $sm) {
+    width: 540px;
+  }
+  @media (min-width: $md) {
+    width: 720px;
+  }
+  @media (min-width: $lg) {
+    width: 960px;
+  }
+  @media (min-width: $xl) {
+    width: 1200px;
+  }
+  @media (min-width: $xl) {
+    width: 62.5vw;
+  }
+  @media (min-width: $xxl) {
+    padding: 0 $gutter;
+  }
+}
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -#{$gutter};
+}
+
+%col {
+  padding: 0 $gutter;
+}
+
+@mixin col-xs($num) {
+  @extend %col;
+  @media (max-width: $sm) {
+    width: calc((100% / #{$cols}) * #{$num});
+  }
+}
+
+@mixin col-sm($num) {
+  @extend %col;
+  @media (min-width: $sm) {
+    width: calc((100% / #{$cols}) * #{$num});
+  }
+}
+
+@mixin col-md($num) {
+  @extend %col;
+  @media (min-width: $md) {
+    width: calc((100% / #{$cols}) * #{$num});
+  }
+}
+
+@mixin col-lg($num) {
+  @extend %col;
+  @media (min-width: $lg) {
+    width: calc((100% / #{$cols}) * #{$num});
+  }
+}
+
+@mixin col-xl($num) {
+  @extend %col;
+  @media (min-width: $xl) {
+    width: calc((100% / #{$cols}) * #{$num});
+  }
+}
